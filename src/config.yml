@@ -1,0 +1,13 @@
+
+world: farms
+farms: []
+
+
+
+#farms:
+#  asdasd-asd-asd-asd:
+#    upgrade: 0
+#    friends: []
+#    banned: false
+#    spawn: 0,0,0
+#    island: 'row::column'
