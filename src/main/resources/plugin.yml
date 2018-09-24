@@ -1,0 +1,4 @@
+name: CubeFarm
+version: ${project.version}
+main: me.candyyn.cubefarm.CubeFarm
+authors: [Candyyn]
