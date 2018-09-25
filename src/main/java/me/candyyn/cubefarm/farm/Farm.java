@@ -3,6 +3,9 @@ package me.candyyn.cubefarm.farm;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import me.candyyn.cubefarm.CubeFarm;
+import me.candyyn.cubefarm.manager.WorldManager;
 import me.candyyn.cubefarm.utils.Constants;
 import me.candyyn.cubefarm.utils.IslandSection;
 import org.bukkit.Location;
@@ -16,7 +19,7 @@ public class Farm {
     private List<UUID> friends;
     private boolean banned;
 
-    public Farm(UUID islandOwner, IslandSection section) {
+    public Farm(UUID islandOwner, IslandSection section, WorldManager worldManager) {
         this.islandOwner = islandOwner;
         this.section = section;
         this.upgrade = 0;
@@ -24,7 +27,7 @@ public class Farm {
         this.friends = new ArrayList<>();
         int x = section.getRow() == 0 ? section.getRow() : section.getRow() * 520;
         int z = section.getColumn() == 0 ? section.getColumn() : section.getColumn() * 520;
-        this.spawnLocation = new Location(null, x, Constants.FARM_Y_COORD, z);
+        this.spawnLocation = new Location(worldManager.getWorld(), x, Constants.FARM_Y_COORD, z);
     }
 
     public UUID getIslandOwner() {

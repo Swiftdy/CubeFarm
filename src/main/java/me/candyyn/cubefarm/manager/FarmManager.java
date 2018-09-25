@@ -49,25 +49,25 @@ public class FarmManager {
         return farmCache.containsKey(uniqueId);
     }
 
-    public Farm createFarm(Player player) {
+    public Farm createFarm(Player player, WorldManager worldManager) {
         IslandSection section = farmGrid.claimSpace(player.getUniqueId());
-        Farm farm = new Farm(player.getUniqueId(), section);
+        Farm farm = new Farm(player.getUniqueId(), section, worldManager);
         saveFarm(farm);
         // Paste schematic
         return farm;
     }
 
-    public Farm getFarm(UUID uniqueId) {
+    public Farm getFarm(UUID uniqueId, WorldManager worldManager) {
         if (!hasFarmInCache(uniqueId)) {
             if (!hasFarmInMemory(uniqueId)) {
                 return null;
             }
-            return loadFarm(uniqueId);
+            return loadFarm(uniqueId, worldManager);
         }
         return farmCache.get(uniqueId);
     }
 
-    public Farm loadFarm(UUID uniqueId) {
+    public Farm loadFarm(UUID uniqueId, WorldManager worldManager) {
         if (!hasFarmInMemory(uniqueId)) {
             return null;
         }
@@ -78,7 +78,7 @@ public class FarmManager {
         IslandSection islandSection = new IslandSection(Integer.parseInt(stringSection[0]),
                 Integer.parseInt(stringSection[1]));
 
-        Farm farm = new Farm(uniqueId, islandSection);
+        Farm farm = new Farm(uniqueId, islandSection, worldManager);
         farm.setUpgrade(section.getInt("upgrade"));
         // Loop through friends convert to uuid
         List<UUID> friends = new ArrayList<>();

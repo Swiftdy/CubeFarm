@@ -1,5 +1,7 @@
 package me.candyyn.cubefarm.commands;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 import me.candyyn.cubefarm.CubeFarm;
 import me.candyyn.cubefarm.farm.Farm;
@@ -50,7 +52,7 @@ public class FarmCommand implements CommandExecutor {
                     return false;
                 }
 
-                farm = farmManager.createFarm(player);
+                farm = farmManager.createFarm(player, worldManager);
                 ChatManager.sendmessage(player, "Farm Created. Teleporting...", ChatColor.AQUA);
                 farm.teleport(player);
                 break;
@@ -59,7 +61,7 @@ public class FarmCommand implements CommandExecutor {
                     // Player doesn't have a farm
                     return false;
                 }
-                farm = farmManager.getFarm(player.getUniqueId());
+                farm = farmManager.getFarm(player.getUniqueId(), worldManager);
                 farm.teleport(player);
             case "teleport":
             case "tp":
@@ -78,5 +80,23 @@ public class FarmCommand implements CommandExecutor {
                 break;
         }
         return true;
+    }
+    public List<String> onTabComplete (CommandSender sender, Command cmd, String label, String[] args){
+        List<String> tab = new ArrayList<String>();
+        if(cmd.getName().equalsIgnoreCase("farm") && args.length >= 0){
+            if(sender instanceof Player){
+                Player player = (Player) sender;
+
+                List<String> list = new ArrayList<>();
+                tab.add("help");
+                tab.add("teleport");
+                tab.add("warp");
+                tab.add("create");
+
+                return tab;
+
+            }
+        }
+        return tab;
     }
 }

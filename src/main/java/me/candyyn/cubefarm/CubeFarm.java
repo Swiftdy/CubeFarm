@@ -9,7 +9,12 @@ public final class CubeFarm extends JavaPlugin {
 
     private WorldManager worldManager;
     private FarmManager farmManager;
+
+    public CubeFarm getCubeFarm() {
+        return this;
+    }
     public void onEnable() {
+        this.saveDefaultConfig();
         worldManager = new WorldManager(this);
         worldManager.createFarmWorld();
         farmManager = new FarmManager(this);
