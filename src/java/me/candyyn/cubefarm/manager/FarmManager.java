@@ -1,18 +1,16 @@
-package me.candyyn.cubefarm.manager;
+package java.me.candyyn.cubefarm.manager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import me.candyyn.cubefarm.CubeFarm;
-import me.candyyn.cubefarm.farm.Farm;
-import me.candyyn.cubefarm.farm.FarmGrid;
-import me.candyyn.cubefarm.utils.Constants;
-import me.candyyn.cubefarm.utils.IslandSection;
-import me.candyyn.cubefarm.utils.Utils;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
+
+import java.me.candyyn.cubefarm.utils.Utils;
+import java.me.candyyn.cubefarm.CubeFarm;
+import java.me.candyyn.cubefarm.farm.Farm;
+import java.me.candyyn.cubefarm.farm.FarmGrid;
+import java.me.candyyn.cubefarm.utils.IslandSection;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 

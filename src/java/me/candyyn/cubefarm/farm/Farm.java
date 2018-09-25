@@ -1,13 +1,13 @@
-package me.candyyn.cubefarm.farm;
+package java.me.candyyn.cubefarm.farm;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import me.candyyn.cubefarm.CubeFarm;
-import me.candyyn.cubefarm.manager.WorldManager;
-import me.candyyn.cubefarm.utils.Constants;
-import me.candyyn.cubefarm.utils.IslandSection;
+import java.me.candyyn.cubefarm.manager.WorldManager;
+import java.me.candyyn.cubefarm.utils.Constants;
+import java.me.candyyn.cubefarm.utils.IslandSection;
+
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 

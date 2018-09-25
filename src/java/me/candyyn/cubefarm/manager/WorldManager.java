@@ -1,8 +1,9 @@
-package me.candyyn.cubefarm.manager;
+package java.me.candyyn.cubefarm.manager;
 
-import me.candyyn.cubefarm.CubeFarm;
-import me.candyyn.cubefarm.world.EmptyWorld;
+import java.me.candyyn.cubefarm.CubeFarm;
+import java.me.candyyn.cubefarm.world.EmptyWorld;
 import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.WorldCreator;
 
 public class WorldManager {
@@ -10,6 +11,11 @@ public class WorldManager {
 
     public WorldManager(CubeFarm cubefarm) {
         this.cubefarm = cubefarm;
+    }
+
+
+    public World getWorld() {
+        return Bukkit.getWorld(cubefarm.getConfig().getString("world"));
     }
 
     public void createFarmWorld() {

@@ -1,13 +1,16 @@
-package me.Candyyn.CubeFarm.Manager;
+package java.me.candyyn.cubefarm.farm;
 
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.UUID;
+import java.me.candyyn.cubefarm.utils.IslandSection;
 
 public class FarmGrid {
-    private String[][] islandGrid;
+
+    private UUID[][] islandGrid;
 
     public FarmGrid(int row, int col) {
-        this.islandGrid = new String[row][col];
+        this.islandGrid = new UUID[row][col];
     }
 
 
@@ -17,35 +20,33 @@ public class FarmGrid {
 
 
 
-    public int[] getFreeSpace() {
-        int[] freeSpace = new int[2];
+    public IslandSection getFreeSpace() {
         for (int row = 0; row < islandGrid.length; row++) {
             for (int col = 0; col < islandGrid[row].length; col++) {
                 if (this.isFree(row, col)) {
-                    freeSpace[0] = row;
-                    freeSpace[1] = col;
-                    return freeSpace;
+                    return new IslandSection(row, col);
                 }
             }
         }
-        return freeSpace;
+        return null;
     }
 
 
     public boolean isFree(int row, int col) {
         return row < islandGrid.length && col < islandGrid[row].length && (
                 islandGrid[row][col] == null
-                        || islandGrid[row][col].isEmpty());
+                        || islandGrid[row][col] == null);
     }
 
-    public void claimSpace(String islandId, int row, int col) {
-        this.islandGrid[row][col] = islandId;
+    public void claimSpace(UUID uniqueId, IslandSection section) {
+        this.islandGrid[section.getRow()][section.getRow()] = uniqueId;
     }
 
 
-    public void claimSpace(String islandId) {
-        int[] freeSpace = this.getFreeSpace();
-        this.claimSpace(islandId, freeSpace[0], freeSpace[1]);
+    public IslandSection claimSpace(UUID uniqueId) {
+        IslandSection freeSpace = this.getFreeSpace();
+        this.claimSpace(uniqueId, freeSpace);
+        return freeSpace;
     }
 
 
@@ -56,11 +57,11 @@ public class FarmGrid {
         this.islandGrid[row][col] = null;
     }
 
-    public Optional<String> getIsland(int row, int col) {
+    public Optional<UUID> getIsland(int row, int col) {
         return this.isFree(row, col) ? Optional.empty() : Optional.of(this.islandGrid[row][col]);
     }
 
-    public String[][] getIslandGrid() {
+    public UUID[][] getIslandGrid() {
         return Arrays.copyOf(this.islandGrid, this.islandGrid.length);
     }
 }

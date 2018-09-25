@@ -1,4 +1,4 @@
-package me.candyyn.cubefarm.utils;
+package java.me.candyyn.cubefarm.utils;
 
 public class IslandSection {
 

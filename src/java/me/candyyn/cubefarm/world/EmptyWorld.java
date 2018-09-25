@@ -1,18 +1,17 @@
-package me.Candyyn.CubeFarm.Manager;
+package java.me.candyyn.cubefarm.world;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Biome;
 import org.bukkit.generator.ChunkGenerator;
 
-public class EmptyWorld extends ChunkGenerator{
+public class EmptyWorld extends ChunkGenerator {
 
-    public byte[][] generateBlockSections(World world, Random random, int chunkX, int chunkZ, BiomeGrid biomeGrid){
+    public byte[][] generateBlockSections(World world, Random random, int chunkX, int chunkZ,
+            BiomeGrid biomeGrid) {
         byte[][] result = new byte[world.getMaxHeight() / 16][];
 
         return result;
@@ -39,13 +38,15 @@ public class EmptyWorld extends ChunkGenerator{
 
 
     @Deprecated
-    public short[][] generateExtBlockSections(World world, Random random, int x, int z, ChunkGenerator.BiomeGrid biomes) {
+    public short[][] generateExtBlockSections(World world, Random random, int x, int z,
+            ChunkGenerator.BiomeGrid biomes) {
         return this.generateExtBlockSections(world, random, x, z, biomes);
     }
 
     public byte[] generate(World world, Random rand, int chunkx, int chunkz) {
         return new byte[32768];
     }
+
     private void setBlock(byte[][] result, int x, int y, int z, byte blkid) {
         if (result[y >> 4] == null) {
             result[y >> 4] = new byte[4096];

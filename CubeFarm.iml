@@ -10,11 +10,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/out/artifacts/spigot-1.13.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/out/artifacts/spigot.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/out/artifacts/spigot-1.13.1.jar!/"  />
+          <root url="jar://$MODULE_DIR$/out/artifacts/spigot.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>

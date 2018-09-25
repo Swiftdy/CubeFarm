@@ -1,4 +1,4 @@
-package me.candyyn.cubefarm.manager;
+package java.me.candyyn.cubefarm.manager;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -15,6 +15,7 @@ public class ChatManager {
         player.sendMessage(" 》 /farm home " +ChatColor.GRAY+" - Teleport you to your farm");
         player.sendMessage(" 》 /farm visit " +ChatColor.GRAY+" - visit a player");
         player.sendMessage(" 》 /farm shop " +ChatColor.GRAY+" - teleport you to the farm shop");
+        player.sendMessage(" 》 /farm create " +ChatColor.GRAY+" - create's a farm");
         player.sendMessage("");
     }
 

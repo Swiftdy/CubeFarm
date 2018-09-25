@@ -1,8 +1,8 @@
-package me.candyyn.cubefarm;
+package java.me.candyyn.cubefarm;
 
-import me.candyyn.cubefarm.commands.FarmCommand;
-import me.candyyn.cubefarm.manager.FarmManager;
-import me.candyyn.cubefarm.manager.WorldManager;
+import java.me.candyyn.cubefarm.commands.FarmCommand;
+import java.me.candyyn.cubefarm.manager.FarmManager;
+import java.me.candyyn.cubefarm.manager.WorldManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class CubeFarm extends JavaPlugin {

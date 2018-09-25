@@ -1,13 +1,14 @@
-package me.candyyn.cubefarm.commands;
+package java.me.candyyn.cubefarm.commands;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
-import me.candyyn.cubefarm.CubeFarm;
-import me.candyyn.cubefarm.farm.Farm;
-import me.candyyn.cubefarm.manager.ChatManager;
-import me.candyyn.cubefarm.manager.FarmManager;
-import me.candyyn.cubefarm.manager.WorldManager;
+
+import java.me.candyyn.cubefarm.manager.FarmManager;
+import java.me.candyyn.cubefarm.CubeFarm;
+import java.me.candyyn.cubefarm.farm.Farm;
+import java.me.candyyn.cubefarm.manager.ChatManager;
+import java.me.candyyn.cubefarm.manager.WorldManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.World;
