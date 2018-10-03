@@ -1,8 +1,12 @@
 name: CubeFarm
 version: 1.0
 author: Candy
-main: me.Candyyn.CubeFarm.Main
+api-version: 1.13
+main: me.candyyn.cubefarm.CubeFarm
 commands:
-      farm:
-          description: Brings up the basic help window for your Farm
-          usage: /Farm
+        farm:
+           description: Brings up the basic help window for your Farm
+           usage: /farm
+        balance:
+           description: Brings up the basic help window for your balace
+           usage: /balance

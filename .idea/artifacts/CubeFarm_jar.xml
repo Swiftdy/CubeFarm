@@ -3,7 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/plugins</output-path>
     <root id="archive" name="CubeFarm.jar">
       <element id="module-output" name="CubeFarm" />
-      <element id="extracted-dir" path="Z:/Download/spigot-1.13.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

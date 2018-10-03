@@ -1,13 +1,29 @@
 
+
+#  ______  __    __  .______    _______  _______    ___      .______   .___  ___.
+# /      ||  |  |  | |   _  \  |   ____||   ____|  /   \     |   _  \  |   \/   |
+#|  ,----'|  |  |  | |  |_)  | |  |__   |  |__    /  ^  \    |  |_)  | |  \  /  |
+#|  |     |  |  |  | |   _  <  |   __|  |   __|  /  /_\  \   |      /  |  |\/|  |
+#|  `----.|  `--'  | |  |_)  | |  |____ |  |    /  _____  \  |  |\  \  |  |  |  |
+# \______| \______/  |______/  |_______||__|   /__/     \__\ | _| `._| |__|  |__|
+#
+
+# Name of the Farm world
 world: farms
+
+#Current Amount of farms that been generated
+farmamount: 0
+
+#List of all farms
 farms: []
 
+#List of all players
+players: []
 
-
-#farms:
-#  asdasd-asd-asd-asd:
-#    upgrade: 0
-#    friends: []
-#    banned: false
-#    spawn: 0,0,0
-#    island: 'row::column'
+#List of all the Schematic
+schematics:
+  trees:
+  - '0'
+  - '1'
+  grass:
+  - '0'

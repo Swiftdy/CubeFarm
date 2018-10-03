@@ -1,8 +1,0 @@
-name: CubeFarm
-version: 1.0
-author: Candy
-main: CubeFarm
-commands:
-      farm:
-          description: Brings up the basic help window for your Farm
-          usage: /farm
